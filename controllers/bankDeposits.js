@@ -1,6 +1,5 @@
 const bankDeposits = require("../models/bankDeposits");
 const resp = require("../helpers/apiresponse");
-//abc
 
 exports.addbankDeposits = async (req, res) => {
   const {
