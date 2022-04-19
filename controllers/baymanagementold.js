@@ -14,6 +14,12 @@ let getCurrentDate = function () {
 console.log(getCurrentDate());
 
 exports.addbm = async (req, res) => {
+  let rsp = await RSP.findOne({ dealer_Id: req.body.dealer_Id }).sort({
+    createdAt: -1,
+  });
+  // let rs1 = rsp.rsp1;
+  // let rs2 = rsp.rsp2;
+  let de = rsp.date;
   const {
     dealer_Id,
     dsm__Id,
